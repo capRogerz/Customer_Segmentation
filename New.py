@@ -365,7 +365,7 @@ def eda():
 def customer_segmentation():
     st.subheader('Customer Segmentation 📈')
 
-    df_user = pd.read_csv('/Users/roger/Downloads/FYP Python/segmentation.csv')
+    df_user = pd.read_csv('segmentation.csv')
 
     Segment = df_user.groupby('Segment').size()
 
