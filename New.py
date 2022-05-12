@@ -338,7 +338,7 @@ def eda():
     
     #st.write('Explore your data with the help of summary statistics and graphical representations!')
     
-    with zipfile.ZipFile("file.zip","r") as zip_ref:
+    with zipfile.ZipFile("Merged_dataset.csv.zip","r") as zip_ref:
         zip_ref.extractall("targetdir")
 
     df = pd.read_csv(zip_ref)
