@@ -20,6 +20,8 @@ from folium.plugins import HeatMap, FastMarkerCluster
 from matplotlib.gridspec import GridSpec
 pd.set_option('display.max_columns', 100)
 from matplotlib.ticker import FuncFormatter
+import zipfile
+
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
@@ -335,29 +337,27 @@ def eda():
     ''')
     
     #st.write('Explore your data with the help of summary statistics and graphical representations!')
-    with st.sidebar.expander("Upload file 👇"):
-        uploaded_file = st.file_uploader('Input file must be CSV only')
     
-    if uploaded_file is not None:
+    with zipfile.ZipFile("file.zip","r") as zip_ref:
+        zip_ref.extractall("targetdir")
 
-        df = pd.read_csv(uploaded_file)
+    df = pd.read_csv(zip_ref)
 
-        option = st.selectbox(
-            'What would you like to analysis?',
-            ('Metadata', 'Dashboard', 'Dashboard 2'))
-           
-        st.write('---')
-        numerical_features = df.select_dtypes(include=['int64','float64', 'uint8']).columns
-        categorical_features = df.select_dtypes(exclude=['int64', 'float64', 'uint8']).columns
+    option = st.selectbox(
+        'What would you like to analysis?',
+        ('Metadata', 'Dashboard', 'Dashboard 2'))
 
-        if option == 'Metadata':
-            dataInsight(df)
-        if option == 'Dashboard':
-            dashboard(df)
-        if option == 'Dashboard 2':
-            dashboard2(df)
-    else:
-        st.caption('No CSV file uploaded into the application')
+    st.write('---')
+    numerical_features = df.select_dtypes(include=['int64','float64', 'uint8']).columns
+    categorical_features = df.select_dtypes(exclude=['int64', 'float64', 'uint8']).columns
+
+    if option == 'Metadata':
+        dataInsight(df)
+    if option == 'Dashboard':
+        dashboard(df)
+    if option == 'Dashboard 2':
+        dashboard2(df)
+
 
 #######################################################
 ## EDA Page
