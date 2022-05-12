@@ -243,12 +243,11 @@ def dashboard(df):
     st.pyplot(plt)
     st.write(' ')
     st.write(' ')
-    ##############
     from PIL import Image
-    image = Image.open('/Users/roger/Downloads/Unknown.png')
-    ##image1 = Image.open('/Users/roger/Downloads/Unknown2.png')
-    image3 = Image.open('/Users/roger/Downloads/Unknown3.png')
-    image4 = Image.open('/Users/roger/Downloads/Unknown4.png')
+    image = Image.open('Unknown.png')
+    ##image1 = Image.open('Unknown2.png')
+    image3 = Image.open('Unknown3.png')
+    image4 = Image.open('Unknown4.png')
     ##st.image(image1)
     ##st.write(' ')
     ##st.write(' ')
@@ -260,7 +259,6 @@ def dashboard(df):
     st.write(' ')
     st.image(image3)
     
-    ###############
 
 def dashboard2(df):
     month_year_line = df['month_year'].value_counts().sort_index()
