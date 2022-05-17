@@ -333,7 +333,7 @@ def eda():
     #st.write('Explore your data with the help of summary statistics and graphical representations!')
 
 
-    df = pd.read_csv('/Users/roger/Downloads/FYP Python/Merged_dataset.csv.zip')
+    df = pd.read_csv('Merged_dataset.csv.zip')
 
     option = st.selectbox(
         'What would you like to analysis?',
@@ -357,7 +357,7 @@ def eda():
 def customer_segmentation():
     st.subheader('Customer Segmentation 📈')
 
-    df_user = pd.read_csv('/Users/roger/Downloads/FYP Python/segmentation.csv')
+    df_user = pd.read_csv('segmentation.csv')
 
     Segment = df_user.groupby('Segment').size()
 
@@ -419,7 +419,7 @@ if page == 'Exploratory Data Analysis':
     ''')
     #st.write('Explore your data with the help of summary statistics and graphical representations!')
         
-    df = pd.read_csv('/Users/roger/Downloads/FYP Python/Merged_dataset.csv.zip')
+    df = pd.read_csv('Merged_dataset.csv.zip')
 
     option = st.selectbox(
         'What would you like to analysis?',
