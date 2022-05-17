@@ -18,7 +18,7 @@ from matplotlib.ticker import FuncFormatter
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.set_page_config(
-    page_title="Customer Segmentation Application", page_icon="https://upload.wikimedia.org/wikipedia/en/thumb/4/43/AsiaPacificUniversityOfTechnology%26Innovation.svg/1200px-AsiaPacificUniversityOfTechnology%26Innovation.svg.png", layout="wide")
+    page_title="Customer Segmentation", page_icon="https://upload.wikimedia.org/wikipedia/en/thumb/4/43/AsiaPacificUniversityOfTechnology%26Innovation.svg/1200px-AsiaPacificUniversityOfTechnology%26Innovation.svg.png", layout="wide")
 
 
 hide_streamlit_style = """
@@ -99,7 +99,7 @@ formatter_thousand_count_y = FuncFormatter(thousand_count_y)
 def overview():  
     
     st.markdown('''
-    ## Customer Segmentation Application 👥
+    ## Welcome to the Application
     ''')
 
     st.write('Divides customers into groups based on common characteristics so you can market to each group effectively!')
