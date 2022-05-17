@@ -1,7 +1,7 @@
 matplotlib==3.5.1
-streamlit==1.7.0
+streamlit==1.7.*
 sklearn==0.0
-pandas==1.3.5
+pandas
 missingno==0.5.1
 streamlit-folium==0.6.5
 folium==0.12.1.post1
