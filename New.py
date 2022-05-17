@@ -243,16 +243,19 @@ def dashboard(df):
     ##image1 = Image.open('/Users/roger/Downloads/Unknown2.png')
     image3 = Image.open('Unknown3.png')
     image4 = Image.open('Unknown4.png')
-    ##st.image(image1)
-    ##st.write(' ')
-    ##st.write(' ')
-    st.image(image4)
+    col1, col2 = st.columns((9,1))
+    with col1:
+        st.image(image4)
     st.write(' ')
     st.write(' ')
-    st.image(image)
+    col1, col2 = st.columns((9,1))
+    with col1:
+        st.image(image)
     st.write(' ')
     st.write(' ')
-    st.image(image3)
+    col1, col2 = st.columns((9,1))
+    with col1:
+        st.image(image3)
     
     ###############
 
