@@ -239,10 +239,10 @@ def dashboard(df):
     st.write(' ')
     ##############
     from PIL import Image
-    image = Image.open('/Users/roger/Downloads/Unknown.png')
+    image = Image.open('Unknown.png')
     ##image1 = Image.open('/Users/roger/Downloads/Unknown2.png')
-    image3 = Image.open('/Users/roger/Downloads/Unknown3.png')
-    image4 = Image.open('/Users/roger/Downloads/Unknown4.png')
+    image3 = Image.open('Unknown3.png')
+    image4 = Image.open('Unknown4.png')
     ##st.image(image1)
     ##st.write(' ')
     ##st.write(' ')
