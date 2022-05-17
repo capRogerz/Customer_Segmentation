@@ -419,7 +419,7 @@ if page == 'Exploratory Data Analysis':
     ''')
     #st.write('Explore your data with the help of summary statistics and graphical representations!')
         
-    df = pd.read_csv('/Users/roger/Downloads/FYP Python/Merged_dataset.csv')
+    df = pd.read_csv('/Users/roger/Downloads/FYP Python/Merged_dataset.csv.zip')
 
     option = st.selectbox(
         'What would you like to analysis?',
