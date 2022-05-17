@@ -333,7 +333,7 @@ def eda():
     #st.write('Explore your data with the help of summary statistics and graphical representations!')
 
 
-    df = pd.read_csv('Merged_dataset.csv.zip')
+    df = pd.read_csv('Merged_dataset.zip')
 
     option = st.selectbox(
         'What would you like to analysis?',
@@ -419,7 +419,7 @@ if page == 'Exploratory Data Analysis':
     ''')
     #st.write('Explore your data with the help of summary statistics and graphical representations!')
         
-    df = pd.read_csv('Merged_dataset.csv.zip')
+    df = pd.read_csv('Merged_dataset.zip')
 
     option = st.selectbox(
         'What would you like to analysis?',
